@@ -1,24 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hike View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HikeViewController" customModule="Hike" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h4D-3D-xh6"/>
+                        <viewControllerLayoutGuide type="bottom" id="7fr-dH-UP6"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hike" translatesAutoresizingMaskIntoConstraints="NO" id="rSL-Sr-Yye">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS Altitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpd-JI-L1G" userLabel="GPS Altitude">
+                                <rect key="frame" x="12" y="635" width="89" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Climbed Altitude" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnl-Dd-4mu" userLabel="Climbed Altitude">
+                                <rect key="frame" x="246" y="635" width="117" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVK-Ar-W2Z">
+                                <rect key="frame" x="12" y="631" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGD-34-Rc6" userLabel="Altitude Label">
+                                <rect key="frame" x="12" y="627" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdE-bJ-DWE" userLabel="Climbed Altitude Label">
+                                <rect key="frame" x="363" y="627" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
+                        <constraints>
+                            <constraint firstItem="xGD-34-Rc6" firstAttribute="leading" secondItem="qVK-Ar-W2Z" secondAttribute="leading" id="7mU-Cw-4BO"/>
+                            <constraint firstItem="lnl-Dd-4mu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hpd-JI-L1G" secondAttribute="trailing" constant="12" id="Ata-Rt-vt4"/>
+                            <constraint firstItem="rSL-Sr-Yye" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BND-js-ela"/>
+                            <constraint firstItem="hpd-JI-L1G" firstAttribute="top" secondItem="qVK-Ar-W2Z" secondAttribute="bottom" constant="4" id="CIk-PA-B5d"/>
+                            <constraint firstItem="qVK-Ar-W2Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="Cx2-Di-ziA"/>
+                            <constraint firstItem="7fr-dH-UP6" firstAttribute="top" secondItem="hpd-JI-L1G" secondAttribute="bottom" constant="14" id="HNQ-A4-elh"/>
+                            <constraint firstAttribute="trailing" secondItem="lnl-Dd-4mu" secondAttribute="trailing" constant="12" id="KvO-08-ZX3"/>
+                            <constraint firstItem="rSL-Sr-Yye" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="NDw-bS-Fm2"/>
+                            <constraint firstItem="kdE-bJ-DWE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xGD-34-Rc6" secondAttribute="trailing" constant="8" symbolic="YES" id="PRr-j7-CFu"/>
+                            <constraint firstItem="rSL-Sr-Yye" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="SbD-oc-Sow"/>
+                            <constraint firstItem="hpd-JI-L1G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="UI9-D1-VvU"/>
+                            <constraint firstItem="kdE-bJ-DWE" firstAttribute="trailing" secondItem="lnl-Dd-4mu" secondAttribute="trailing" id="gAY-wA-KmL"/>
+                            <constraint firstItem="rSL-Sr-Yye" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pn8-bV-3Fq"/>
+                            <constraint firstItem="kdE-bJ-DWE" firstAttribute="centerY" secondItem="xGD-34-Rc6" secondAttribute="centerY" id="qiS-De-7lQ"/>
+                            <constraint firstItem="lnl-Dd-4mu" firstAttribute="centerY" secondItem="hpd-JI-L1G" secondAttribute="centerY" id="uYg-fS-6WD"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qVK-Ar-W2Z" secondAttribute="trailing" constant="12" id="wfc-pd-ZGh"/>
+                            <constraint firstItem="qVK-Ar-W2Z" firstAttribute="top" secondItem="xGD-34-Rc6" secondAttribute="bottom" constant="4" id="yF0-Og-Mxm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="altitudeAccuracy" destination="qVK-Ar-W2Z" id="UhV-ZA-zuQ"/>
+                        <outlet property="altitudeLabel" destination="xGD-34-Rc6" id="hXN-kw-lya"/>
+                        <outlet property="climbedAltitudeLabel" destination="kdE-bJ-DWE" id="J3F-bR-8he"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="hike" width="500" height="415"/>
+    </resources>
 </document>
